@@ -13,8 +13,7 @@ import org.dom4j.io.SAXReader;
 * bean工厂类.   
 * @author Hezf
 */
-public class BeanFactory {
-       private Map<String, Object> beanMap = new HashMap<String, Object>();
+public class XmlBeanFactory extends AbstractBeanFactory {
        
        /**
         * bean工厂的初始化.
@@ -97,10 +96,13 @@ public class BeanFactory {
        * @param args
        */
        public static void main(String[] args) {
-              BeanFactory factory = new BeanFactory();
+              AbstractBeanFactory factory = new XmlBeanFactory();
               factory.init("config.xml");
               JavaBean javaBean = (JavaBean) factory.getBean("javaBean");
               System.out.println("userName=" + javaBean.getUserName());
               System.out.println("password=" + javaBean.getPassword());
+              JavaBean javaBean1 = (JavaBean) factory.getBean("javaBean1");
+              System.out.println("userName=" + javaBean1.getUserName());
+              System.out.println("password=" + javaBean1.getPassword());
        }
 }

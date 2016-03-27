@@ -8,4 +8,12 @@
            <value>12345678</value>
        </property>
     </bean>
+     <bean id="javaBean1" class="com.importsource.ioc.context.JavaBean">
+       <property name="userName">
+           <value>charles</value>
+       </property>
+       <property name="password">
+           <value>23423434565656565</value>
+       </property>
+    </bean>
 </beans>
