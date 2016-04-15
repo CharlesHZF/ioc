@@ -1,4 +1,4 @@
-package com.importsource.ioc.context;
+package com.importsource.ioc.sample.bean;
 /**
 *
 * 简单的bean，用于测试  

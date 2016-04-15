@@ -9,6 +9,9 @@ import java.util.Map;
  *
  */
 public abstract class AbstractBeanFactory {
+	 /**
+	  * 把读到的bean通通放到里边
+	  */
 	 protected Map<String, Object> beanMap = new HashMap<String, Object>();
 	 public abstract void init(String xml);
 	 public abstract Object getBean(String beanName);

@@ -1,9 +1,7 @@
 package com.importsource.ioc.context;
 import java.io.InputStream;
 import java.lang.reflect.Method;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -98,11 +96,14 @@ public class XmlBeanFactory extends AbstractBeanFactory {
        public static void main(String[] args) {
               AbstractBeanFactory factory = new XmlBeanFactory();
               factory.init("config.xml");
-              JavaBean javaBean = (JavaBean) factory.getBean("javaBean");
-              System.out.println("userName=" + javaBean.getUserName());
-              System.out.println("password=" + javaBean.getPassword());
               JavaBean javaBean1 = (JavaBean) factory.getBean("javaBean1");
               System.out.println("userName=" + javaBean1.getUserName());
               System.out.println("password=" + javaBean1.getPassword());
+              
+              AbstractBeanFactory factory1 = new AnnotationBeanFactory();
+              factory.init("aconfig.xml");
+              JavaBean javaBean2 = (JavaBean) factory.getBean("com.importsource.ioc.JavaBean");
+              System.out.println("userName=" + javaBean2.getUserName());
+              System.out.println("password=" + javaBean2.getPassword());
        }
 }

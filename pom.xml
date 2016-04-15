@@ -13,5 +13,10 @@
 			<artifactId>dom4j</artifactId>
 			<version>1.6</version>
 		</dependency>
+		<dependency>
+			<groupId>com.importsource.conf</groupId>
+			<artifactId>importsource-conf</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
