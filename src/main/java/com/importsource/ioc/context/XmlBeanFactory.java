@@ -94,15 +94,15 @@ public class XmlBeanFactory extends AbstractBeanFactory {
        * @param args
        */
        public static void main(String[] args) {
-              AbstractBeanFactory factory = new XmlBeanFactory();
+            /*  AbstractBeanFactory factory = new XmlBeanFactory();
               factory.init("config.xml");
               JavaBean javaBean1 = (JavaBean) factory.getBean("javaBean1");
               System.out.println("userName=" + javaBean1.getUserName());
-              System.out.println("password=" + javaBean1.getPassword());
+              System.out.println("password=" + javaBean1.getPassword());*/
               
               AbstractBeanFactory factory1 = new AnnotationBeanFactory();
-              factory.init("aconfig.xml");
-              JavaBean javaBean2 = (JavaBean) factory.getBean("com.importsource.ioc.JavaBean");
+              factory1.init("aconfig.xml");
+              JavaBean javaBean2 = (JavaBean) factory1.getBean("com.importsource.ioc.JavaBean");
               System.out.println("userName=" + javaBean2.getUserName());
               System.out.println("password=" + javaBean2.getPassword());
        }
